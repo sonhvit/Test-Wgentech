@@ -1,0 +1,440 @@
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video,
+details,
+summary {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section,
+details,
+summary {
+  display: block;
+}
+
+/* Handle box-sizing while better addressing child elements:
+   https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+
+/* Responsive images and other embedded objects
+*/
+img,
+object,
+embed {
+  max-width: 100%;
+}
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	 In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+
+#map img {
+		max-width: none;
+}
+*/
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {
+  overflow-y: scroll;
+}
+
+/* we use a lot of ULs that aren't bulleted.
+	don't forget to restore the bullets within content. */
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help;
+}
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  font-weight: bold;
+  vertical-align: bottom;
+}
+td {
+  font-weight: normal;
+  vertical-align: top;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+pre {
+  white-space: pre; /* CSS2 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+input[type="checkbox"] {
+  vertical-align: bottom;
+}
+.ie7 input[type="checkbox"] {
+  vertical-align: baseline;
+}
+.ie6 input {
+  vertical-align: text-bottom;
+}
+
+select,
+input,
+textarea {
+  font: 99% sans-serif;
+}
+
+table {
+  font-size: inherit;
+  font: 100%;
+}
+
+small {
+  font-size: 85%;
+}
+
+strong {
+  font-weight: bold;
+}
+
+td,
+td img {
+  vertical-align: top;
+}
+
+.img-responsive {
+  max-width: 100%;
+}
+main {
+  margin: 50px 0;
+}
+.rounded-lg {
+  border-radius: 24px;
+}
+.rounded-md {
+  border-radius: 16px;
+}
+// style section
+.flex {
+  display: flex;
+}
+.justify-center {
+  justify-content: center;
+}
+.items-center {
+  align-items: center;
+}
+.text-center {
+  text-align: center;
+}
+.full-img-cover {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.title-page {
+  font-family: Lora;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 54px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.section-about {
+  margin-bottom: 80px;
+  color: #2c2a29;
+  padding: 0 8px;
+  .container {
+    max-width: 810px;
+    margin: 0 auto;
+  }
+  &_image {
+    max-width: 790px;
+    gap: 32px;
+    margin: 0 auto 48px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  &_content {
+    p {
+      font-family: "Lato";
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 22px;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      margin-bottom: 16px;
+    }
+  }
+  h2 {
+    margin-bottom: 49px;
+  }
+}
+.section-news {
+  text-align: center;
+  color: #1f1f1f;
+  padding: 0 8px;
+  .container {
+    max-width: 1376px;
+    margin: 0 auto;
+    text-align: left;
+  }
+}
+.news-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+  &_content {
+    background: #f4f0ea;
+    padding: 48.5px 48.5px 23px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  &:nth-child(2) {
+    .news-item_content {
+      padding-bottom: 50px;
+      padding-right: 55px;
+    }
+    p {
+      margin-bottom: 18px;
+    }
+    h2 {
+      margin-bottom: 38px;
+    }
+  }
+  h2 {
+    font-family: "Lora";
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 74px;
+    margin-bottom: 27px;
+  }
+  h4 {
+    font-family: "Lato";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    margin-bottom: 6px;
+    letter-spacing: 0.2px;
+  }
+  p {
+    font-family: "Lato";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    margin-bottom: 25px;
+  }
+  &_image {
+    line-height: 0;
+  }
+}
+@media (max-width: 1199px) {
+  .news-item h2 {
+    font-size: 44px;
+    line-height: 56px;
+  }
+  .news-item h4 {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 991px) {
+  .news-item_content {
+    padding: 25px 25px 10px;
+  }
+  .news-item h2 {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  .section-about_image {
+    gap: 4px;
+    max-width: 760px;
+  }
+}
+@media (min-width: 768px) {
+  .news-item:nth-child(1) {
+    .news-item_content {
+      order: 2;
+    }
+    .news-item_image {
+      order: 1;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .news-item {
+    grid-template-columns: 1fr;
+  }
+  .title-page {
+    font-size: 32px;
+    line-height: 42px;
+  }
+  .section-about h2 {
+    margin-bottom: 27px;
+  }
+  .section-about_image {
+    margin-bottom: 26px;
+  }
+  .section-about_content {
+    padding: 0 8px;
+    p {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+  .section-about {
+    margin-bottom: 40px;
+  }
+  .news-item_content {
+    padding: 35px 17px 25px;
+  }
+  .news-item h2 {
+    margin-bottom: 16px;
+  }
+  .news-item p {
+    margin-bottom: 18px;
+  }
+  .rounded-lg {
+    border-radius: 16px;
+  }
+  .news-item:nth-child(2) .news-item_content {
+    padding: 22px 18px 2px;
+  }
+  .news-item:nth-child(2) h2 {
+    margin-bottom: 14px;
+  }
+}
