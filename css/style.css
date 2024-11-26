@@ -291,14 +291,14 @@ main {
   max-width: 810px;
   margin: 0 auto;
 }
-.section-about_image {
+.section-about__image {
   max-width: 790px;
   gap: 32px;
   margin: 0 auto 48px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.section-about_content p {
+.section-about__content p {
   font-family: "Lato";
   font-size: 16px;
   font-weight: 400;
@@ -330,14 +330,14 @@ main {
   box-sizing: border-box;
   margin-bottom: 8px;
 }
-.news-item_content {
+.news-item__content {
   background: #f4f0ea;
   padding: 48.5px 48.5px 23px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
 }
-.news-item:nth-child(2) .news-item_content {
+.news-item:nth-child(2) .news-item__content {
   padding-bottom: 50px;
   padding-right: 55px;
 }
@@ -369,7 +369,7 @@ main {
   line-height: 22px;
   margin-bottom: 25px;
 }
-.news-item_image {
+.news-item__image {
   line-height: 0;
 }
 
@@ -384,23 +384,23 @@ main {
   }
 }
 @media (max-width: 991px) {
-  .news-item_content {
+  .news-item__content {
     padding: 25px 25px 10px;
   }
   .news-item h2 {
     font-size: 32px;
     line-height: 42px;
   }
-  .section-about_image {
+  .section-about__image {
     gap: 4px;
     max-width: 760px;
   }
 }
 @media (min-width: 768px) {
-  .news-item:nth-child(1) .news-item_content {
+  .news-item:nth-child(1) .news-item__content {
     order: 2;
   }
-  .news-item:nth-child(1) .news-item_image {
+  .news-item:nth-child(1) .news-item__image {
     order: 1;
   }
 }
@@ -415,20 +415,20 @@ main {
   .section-about h2 {
     margin-bottom: 27px;
   }
-  .section-about_image {
+  .section-about__image {
     margin-bottom: 26px;
   }
-  .section-about_content {
+  .section-about__content {
     padding: 0 8px;
   }
-  .section-about_content p {
+  .section-about__content p {
     font-size: 14px;
     line-height: 22px;
   }
   .section-about {
     margin-bottom: 40px;
   }
-  .news-item_content {
+  .news-item__content {
     padding: 35px 17px 25px;
   }
   .news-item h2 {
@@ -440,7 +440,7 @@ main {
   .rounded-lg {
     border-radius: 16px;
   }
-  .news-item:nth-child(2) .news-item_content {
+  .news-item:nth-child(2) .news-item__content {
     padding: 22px 18px 2px;
   }
   .news-item:nth-child(2) h2 {
